@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #e2c35d, #d88771);
+    color: #fff;
+    min-height: 100vh;
+}
+
+header,
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+}
+
+form input,
+form button {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border: none;
+    background: #fff;
+}
+
+form button{
+    background: #fff;
+    color: #d88771;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+form button:hover {
+    background: #d88771;
+    color: #fff;
+}
+
+.todo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo_list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem;
+    background: #fff;
+    color: #000;
+    font-size: 1.5rem;
+    transition: all 0.5s ease;
+}
+
+.todo_item {
+    flex: 1;
+    padding: 0 0.5em;
+    text-align: center;
+}
+
+.complete_btn, .trash_btn {
+    background: #ff6f47;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.complete_btn {
+    background: rgb(73, 204, 73);
+}
+
+.fa-check, .fa-trash {
+    /* TO MAKE BUTTONS CLICKABLE */
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(25deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select{
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.select::after {
+    content: "\25BC";
+    background: #ff6f47;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background: #fff;
+    color: #ff6f47;
+}
